@@ -1,0 +1,50 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+@property --navColor {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: rgb(142, 210, 210);
+}
+
+@property --navColorSelect {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: rgb(78, 159, 159);
+}
+
+:root {
+    --navColor: <color> 
+}
+header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: var(--navColor) ;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav{
+    height: 100%;
+    display: flex;
+    padding-top: auto;
+    padding-bottom: auto;
+}
+span[class^="nav"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 200px;
+    padding: auto;
+    font-size: 35px;
+}
+
+span[class^="nav"]:hover {
+    background-color: var(--navColorSelect);
+}

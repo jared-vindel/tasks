@@ -23,4 +23,6 @@ public class Activity
     [Column("description", TypeName = "nvarchar (100)")]
     [StringLength(100)]
     public string Description { set; get; } = null!;
+
+    //TO DO agregar un ICollection con las Tasks que tenga la actividad para ordenarlas
 } 

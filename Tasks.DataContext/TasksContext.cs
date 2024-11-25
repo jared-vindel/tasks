@@ -78,6 +78,9 @@ public partial class TasksContext : DbContext
         {
             entity.Property( e => e.Description).HasDefaultValue("");
         });
+
+        // TO DO definir claves compuestas para ActivityDetails y TaskException 
+        // TO DO ver caso en que un ActivityDetail no tiene en cargado (PersonID)tendría que tener valor por defecto
     }
 
 }
