@@ -13,11 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TasksWebApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-<<<<<<< Updated upstream
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1d4727043ccf7f916b0fe7862b5bc89917d1387f")]
-=======
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2de4d9a95c556d0ceb3ae712ae4f320a3d724e0b")]
->>>>>>> Stashed changes
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+07d86d0f181696a4a828a27c14e6e973483e6cd0")]
 [assembly: System.Reflection.AssemblyProductAttribute("TasksWebApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TasksWebApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
