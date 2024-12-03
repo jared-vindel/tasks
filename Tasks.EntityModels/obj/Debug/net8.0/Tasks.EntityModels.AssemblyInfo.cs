@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Tasks.EntityModels")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b8b19c08e282b49c6712c9a89b44e114d1007868")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0ab019a31bd562fd65779c3e6c1401c844478ff1")]
 [assembly: System.Reflection.AssemblyProductAttribute("Tasks.EntityModels")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Tasks.EntityModels")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
