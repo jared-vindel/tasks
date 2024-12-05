@@ -1,7 +1,11 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\angel\\Documents\\C-Sharp\\tasks\\TasksWebApp\\wwwroot\\styles\\style.css",
+      "Id": "C:\\Users\\Dell\\Desktop\\JARED\\tasks\\TasksWebApp\\wwwroot\\styles\\Tasks.css",
+      "PackagePath": "staticwebassets\\styles\\Tasks.css"
+    },
+    {
+      "Id": "C:\\Users\\Dell\\Desktop\\JARED\\tasks\\TasksWebApp\\wwwroot\\styles\\style.css",
       "PackagePath": "staticwebassets\\styles\\style.css"
     },
     {

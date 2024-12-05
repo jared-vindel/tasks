@@ -1,0 +1,26 @@
+.tasks{
+  margin-top: 150px;
+  padding-left: 20px;
+}
+
+table{
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 35%;
+}
+
+th, td{
+  border: 1px solid black;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: rgb(54, 152, 209);
+  border-radius: 1px;
+}
+
+.del-button{
+  width: 5%;
+}
+

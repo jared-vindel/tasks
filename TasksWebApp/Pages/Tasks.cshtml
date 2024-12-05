@@ -1,0 +1,42 @@
+@page
+@using Tasks.EntityModels
+@model Tasks.Web.Pages.TasksModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@section extraStyles {
+  <link rel="stylesheet" href="/styles/Tasks.css">
+}
+
+<div class="tasks">
+  <table>
+    <thead class="thead-inverse">
+      <tr>
+        <th class="del-button"></th>
+        <th class="nom">Nombre</th>
+      </tr>
+    </thead>
+    <tbody>
+      @if (Model.Tasks is not null)
+      {
+        @foreach (Tasks.EntityModels.Task t in Model.Tasks)
+        {
+          <tr>
+            <td>
+              <button type="button" class="btn btn-sm btn-danger">
+              </button>
+            </td>
+            <td>@t.TaskName</td>
+          </tr>
+        }
+      }
+    </tbody>
+  </table>
+</div>
+
+<div class="row">
+  <form method="post">
+    <label for="TaskName">Nombre</label><br>
+    <input type="text" asp-for="Task!.TaskName" id="TaskName"><br>
+    <input asp-page-handler="Add" type="submit" value="Añadir">
+  </form>
+</div>
