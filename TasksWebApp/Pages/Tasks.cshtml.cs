@@ -49,4 +49,30 @@ public class TasksModel : PageModel
       return BadRequest();
     }
   }
+
+  public IActionResult OnPostDelete(int idToDelete)
+  {
+    if (IsIdInUse(idToDelete))
+    {
+      ModelState.AddModelError(string.Empty, "El elemento está en uso y no puede ser eliminado.");
+      return RedirectToPage("Tasks");
+    }
+
+    var itemToRemove = _db.Tasks.FirstOrDefault(i => i.TaskID == idToDelete);
+    if (itemToRemove != null)
+    {
+      _db.Tasks.Remove(itemToRemove);
+      _db.SaveChanges();
+    }
+
+    return RedirectToPage("Tasks"); // Redirigir para reflejar los cambios
+  }
+
+  private bool IsIdInUse(int id)
+  {
+    if(_db.TaskExceptions.Any(te => te.TaskID == id) && _db.ActivityDetails.Any(ad => ad.TaskID == id)){
+      return true; 
+    }
+    return false;
+  } 
 }

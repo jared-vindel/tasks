@@ -22,8 +22,10 @@
         {
           <tr>
             <td>
-              <button type="button" class="btn btn-sm btn-danger">
-              </button>
+              <form method="post" asp-page-handler="Delete">
+                <input type="hidden" name="idToDelete" value="@t.TaskID" />
+                <button class="btn btn-sm btn-danger" type="submit">x</button>
+              </form>
             </td>
             <td>@t.TaskName</td>
           </tr>
