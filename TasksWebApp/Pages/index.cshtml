@@ -1,7 +1,11 @@
 @*Prueba*@
 
 @page
-@section navStyle {
+@model Tasks.Web.Pages.IndexModel
+@using Tasks.EntityModels
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@section extraStyles {
     <style>
         .navPerson { 
             background-color: rgb(78, 159, 159); 
@@ -13,6 +17,26 @@
     body {
         width: 100%;
         height: 200rem;
-        background-image: linear-gradient(1800deg, rgb(62, 192, 131), rebeccapurple);
+        background-image: linear-gradient(1800deg, rgb(62, 192, 131), white);
+    }
+
+    .index{
+        margin-top: 200px;
     }
 </style>
+
+<div class="index">
+    <table>
+        <thead>
+            <tr>
+                <th>Próximas Actividades</th>
+                <th>Fecha</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        </tbody>
+    </table>
+</div>
+
+
