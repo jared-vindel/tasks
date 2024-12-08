@@ -34,7 +34,14 @@
             </tr>
         </thead>
         <tbody>
-            
+            @if (Model.Activities is not null){
+                @foreach(Activity a in Model.Activities){
+                    <tr>
+                        <td>@a.ActivityName</td>
+                        <td>@a.Date</td>
+                    </tr>
+                }
+            }
         </tbody>
     </table>
 </div>

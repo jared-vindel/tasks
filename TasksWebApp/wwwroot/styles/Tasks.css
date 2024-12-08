@@ -24,3 +24,7 @@ tr:nth-child(even) {
   width: 5%;
 }
 
+.desc-input{
+  width: 400px; 
+  height: 100px; 
+}

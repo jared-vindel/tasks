@@ -22,7 +22,7 @@ public class TasksModel : PageModel
   public void OnGet()
   {
     ViewData["title"] = "Tareas";
-    Tasks = _db.Tasks.OrderBy(t => t.TaskName);
+    Tasks = _db.Tasks.OrderBy(t => t.TaskName.ToLower());
   }
 
   public IActionResult OnPostAdd()
@@ -30,15 +30,12 @@ public class TasksModel : PageModel
     if (Task is not null && ModelState.IsValid)
     {
       bool exists = _db.Tasks.Any(t => t.TaskName.ToLower() == Task.TaskName.ToLower());
-
+      
       if (exists)
       {
-        return BadRequest(); // Task already exists
-      }
-
-      if (exists)
-      {
-        return BadRequest();
+        //return BadRequest();
+        TempData["Exists"] = "La tarea ya existe. Por favor, ingrese un nombre diferente.";
+        return RedirectToPage("Tasks");
       }
       _db.Tasks.Add(Task);
       _db.SaveChanges();
@@ -54,7 +51,7 @@ public class TasksModel : PageModel
   {
     if (IsIdInUse(idToDelete))
     {
-      ModelState.AddModelError(string.Empty, "El elemento está en uso y no puede ser eliminado.");
+      TempData["InUse"] = "Tarea en uso. No puede ser eliminada.";
       return RedirectToPage("Tasks");
     }
 
@@ -65,7 +62,7 @@ public class TasksModel : PageModel
       _db.SaveChanges();
     }
 
-    return RedirectToPage("Tasks"); // Redirigir para reflejar los cambios
+    return RedirectToPage("Tasks"); 
   }
 
   private bool IsIdInUse(int id)

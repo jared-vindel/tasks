@@ -36,10 +36,33 @@
   </table>
 </div>
 
-<div class="row">
+<div class="addTask">
   <form method="post">
-    <label for="TaskName">Nombre</label><br>
-    <input type="text" asp-for="Task!.TaskName" id="TaskName"><br>
-    <input asp-page-handler="Add" type="submit" value="Añadir">
+    <div>
+      <label for="TaskName">Nombre</label><br>
+      <input type="text" asp-for="Task!.TaskName" id="TaskName">
+    </div>
+    <div>
+      <label for="TaskDesc">Descripción</label><br>
+      <input class="desc-input" type="text" asp-for="Task!.Description" id="TaskDesc"><br>
+      <input asp-page-handler="Add" type="submit" value="Añadir">
+    </div>
   </form>
 </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const message = '@TempData["Exists"]';
+    if (message) {
+      alert(message);
+    }
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const message = '@TempData["InUse"]';
+    if (message) {
+      alert(message);
+    }
+  });
+
+</script>
