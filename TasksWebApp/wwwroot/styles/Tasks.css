@@ -1,30 +1,32 @@
-.tasks{
-  margin-top: 150px;
-  padding-left: 20px;
+.mt-100 {
+  margin-top: 100px;
 }
 
-table{
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
+.tasks-table {
+  align-self: flex-start;
+  width: max(60%, 550px);
+  max-height: 770px;
+  margin-right: 5%;
+  overflow-y: auto;
+}
+
+.form {
+  width: 35%;
+  height: fit-content;
+}
+
+.del-col {
+  width: 30px;
+}
+
+.name-col {
+  width: 55%;
+}
+
+.name-col {
   width: 35%;
 }
 
-th, td{
-  border: 1px solid black;
-  text-align: left;
-  padding: 8px;
-}
-
-tr:nth-child(even) {
-  background-color: rgb(54, 152, 209);
-  border-radius: 1px;
-}
-
-.del-button{
-  width: 5%;
-}
-
-.desc-input{
-  width: 400px; 
-  height: 100px; 
+.container {
+  position: sticky;
 }

@@ -33,7 +33,6 @@ public class TasksModel : PageModel
       
       if (exists)
       {
-        //return BadRequest();
         TempData["Exists"] = "La tarea ya existe. Por favor, ingrese un nombre diferente.";
         return RedirectToPage("Tasks");
       }
